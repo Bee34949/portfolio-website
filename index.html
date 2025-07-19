@@ -19,6 +19,17 @@
       padding: 1.5rem;
       text-align: center;
     }
+    nav {
+      background: #333;
+      padding: 0.8rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
     section {
       padding: 2rem;
       max-width: 900px;
@@ -39,6 +50,24 @@
       margin-top: 2rem;
       font-size: 0.9rem;
     }
+    img.project, img.cert {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 5px;
+      text-align: center;
+    }
+    @media screen and (max-width: 600px) {
+      body, section {
+        padding: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -48,13 +77,21 @@
   <p>วงศพัทธ์ นาคม่วง | รหัสนักศึกษา 6504101378</p>
 </header>
 
-<section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
   <h2>ประวัติส่วนตัว (About Me)</h2>
   <p>สวัสดีครับ ผมชื่อวงศพัทธ์ นาคม่วง กำลังศึกษาอยู่ชั้นปีที่ 4 สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้<br>
   สนใจด้าน Backend Development, AI, และ Smart Infrastructure</p>
 </section>
 
-<section>
+<section id="skills">
   <h2>ทักษะ (Skills)</h2>
   <ul>
     <li>ภาษา: Python, JavaScript, PHP</li>
@@ -65,21 +102,31 @@
   </ul>
 </section>
 
-<section>
+<section id="projects">
   <h2>โครงงาน / โปรเจกต์ (Projects)</h2>
   <ul>
     <li><strong>Indoor Map for Airport Navigation</strong> - ระบบแผนที่ในสนามบินพร้อมแสดงเส้นทางแบบไดนามิก</li>
-    <li><strong>กล้องตรวจจับเช็คชื่อนักศึกษา</strong> - ใช้ AI ประมวลผลใบหน้าจากกล้องCCTV</li>
-    <li><strong>บอทเทรดอัตโนมัติที่สามารถทำการซื้อขายได้โดยอิงจากตัวบ่งชี้ทางเทคนิค</strong> - เทรดหุ้นอัตโนมัติตามความเหมาะสม</li>
+    <figure><img src="AirportMap.png" alt="Indoor Map" class="project"><figcaption>Indoor Map Project</figcaption></figure>
+    <li><strong>กล้องตรวจจับเช็คชื่อนักศึกษา</strong> - ใช้ AI ประมวลผลใบหน้าจากกล้อง CCTV</li>
+    <figure><img src="images/face_recognition.jpg" alt="Face Recognition" class="project"><figcaption>AI Face Detection Project</figcaption></figure>
   </ul>
 </section>
 
-<section>
-  <h2>เป้าหมาย (Goal)</h2>
-  <p>มีเป้าหมายที่จะพัฒนาตนเองในสาย Backend และ AI Developer และสร้างระบบที่สามารถช่วยพัฒนาสังคมได้อย่างยั่งยืน</p>
+<section id="certificates">
+  <h2>ใบรับรอง (Certificates)</h2>
+  <ul>
+    <li>Microsoft Copilot – Microsoft – 2025</li>
+    <li>Fundamentals AI – Microsoft – 2024</li>
+    <li>Azure AI Vision – Microsoft – 2024</li>
+  </ul>
+  <figure><img src="Copilot.png" alt="Certificate Copilot" class="cert"><figcaption>Microsoft Copilot Certificate</figcaption></figure>
+  <figure><img src="FundaAi.png" alt="Certificate AI" class="cert"><figcaption>AI Fundamentals Certificate</figcaption></figure>
+  <figure><img src="AzureAi.png" alt="Certificate Azure" class="cert"><figcaption>Azure AI Vision Certificate</figcaption></figure>
+  <p>QR Code (เชื่อมลิงก์ GitHub Portfolio):</p>
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/Bee34949" alt="QR Code to GitHub" class="cert">
 </section>
 
-<div class="contact">
+<div class="contact" id="contact">
   <p>GitHub: <a href="https://github.com/Bee34949" target="_blank">github.com/Bee34949</a> | Email: Wongsaphatbbgun@gmail.com</p>
 </div>
 
